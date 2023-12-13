@@ -14,6 +14,8 @@ const ANDY_PLAYER_ID = process.env.ANDY_PLAYER_ID ?? ''
 const ALAN_PLAYER_ID = process.env.ALAN_PLAYER_ID ?? ''
 const ERIK_PLAYER_ID = process.env.ERIK_PLAYER_ID ?? ''
 
+const SERVER_URL = process.env.SERVER_URL ?? ''
+
 export const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -84,12 +86,12 @@ client.on("interactionCreate", async (interaction) => {
 
     // Fetch data from API
     await axios.all([
-      axios(`http://localhost:3000/${VI_PLAYER_ID}`),
-      axios(`http://localhost:3000/${AMANDA_PLAYER_ID}`),
-      axios(`http://localhost:3000/${RYAN_PLAYER_ID}`),
-      axios(`http://localhost:3000/${ANDY_PLAYER_ID}`),
-      axios(`http://localhost:3000/${ALAN_PLAYER_ID}`),
-      axios(`http://localhost:3000/${ERIK_PLAYER_ID}`),
+      axios(`${SERVER_URL + VI_PLAYER_ID}`),
+      axios(`${SERVER_URL + AMANDA_PLAYER_ID}`),
+      axios(`${SERVER_URL + RYAN_PLAYER_ID}`),
+      axios(`${SERVER_URL + ANDY_PLAYER_ID}`),
+      axios(`${SERVER_URL + ALAN_PLAYER_ID}`),
+      axios(`${SERVER_URL + ERIK_PLAYER_ID}`),
     ])
       .then(axios.spread((
         viData,
