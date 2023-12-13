@@ -83,7 +83,7 @@ client.on("interactionCreate", async (interaction) => {
     let alanTrophies = null
     let erikTrophies = null
     let finalReply = ''
-
+    
     // Fetch data from API
     await axios.all([
       axios(`${SERVER_URL + VI_PLAYER_ID}`),
