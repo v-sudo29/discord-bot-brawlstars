@@ -1,7 +1,8 @@
 import { Client, GatewayIntentBits, Routes, EmbedBuilder } from 'discord.js'
 import { REST } from 'discord.js'
-const axios = require('axios');
-require('dotenv').config()
+import axios from 'axios'
+import dotenv from 'dotenv'
+dotenv.config()
 
 const CLIENT_TOKEN = process.env.CLIENT_TOKEN ?? ''
 const CLIENT_ID = process.env.CLIENT_ID ?? ''

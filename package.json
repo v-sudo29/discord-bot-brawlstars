@@ -2,11 +2,13 @@
   "name": "bs-discord-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/client.js",
+  "exports": "./dist/client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.ts",
-    "start": "node -r esm src/server.ts"
+    "dev": "ts-node src/client.ts & nodemon src/server.ts",
+    "start": "node ./dist/server.js & node ./dist/client.js",
+    "build": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -21,5 +23,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.10.4"
+  },
+  "engines": {
+    "node": ">= 16.0.0"
   }
 }
