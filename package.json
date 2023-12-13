@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node src/client.ts & nodemon src/server.ts",
     "start": "node ./dist/server.js & node ./dist/client.js",
-    "build": "tsc"
+    "build": "npm install && tsc"
   },
   "keywords": [],
   "author": "",
