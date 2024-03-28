@@ -102,7 +102,7 @@ client.on("interactionCreate", async (interaction) => {
         erikData
       ) => {
         viTrophies = viData.data.trophies + ' --------Vi'
-        amandaTrophies = amandaData.data.trophies + ' --------Amanda 💩'
+        amandaTrophies = amandaData.data.trophies + ' --------Amanda'
         ryanTrophies = ryanData.data.trophies + ' --------Ryan'
         andyTrophies = andyData.data.trophies + ' --------Andy'
         alanTrophies = alanData.data.trophies + ' --------Alan'
@@ -134,7 +134,11 @@ client.on("interactionCreate", async (interaction) => {
           sortedPlayers[i] = convertedTrophiesNum + playerName
           if (i === 0) {
             sortedPlayers[i] = `${i + 1}. ${sortedPlayers[i]} 👑`
-          } else {
+          } 
+          if (sortedPlayers[i] === ' --------Amanda') {
+            sortedPlayers[i] = `${i + 1}. ${sortedPlayers[i]} 💩`
+          }
+          if (sortedPlayers[i] !== ' --------Amanda' && i !== 0) {
             sortedPlayers[i] = `${i + 1}. ${sortedPlayers[i]}`
           }
         }
