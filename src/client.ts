@@ -102,7 +102,7 @@ client.on("interactionCreate", async (interaction) => {
         erikData
       ) => {
         viTrophies = viData.data.trophies + ' --------Vi'
-        amandaTrophies = amandaData.data.trophies + ' --------Amanda &#x1F4A9;'
+        amandaTrophies = amandaData.data.trophies + ' --------Amanda :poop:'
         ryanTrophies = ryanData.data.trophies + ' --------Ryan'
         andyTrophies = andyData.data.trophies + ' --------Andy'
         alanTrophies = alanData.data.trophies + ' --------Alan'
