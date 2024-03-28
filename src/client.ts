@@ -102,7 +102,7 @@ client.on("interactionCreate", async (interaction) => {
         erikData
       ) => {
         viTrophies = viData.data.trophies + ' --------Vi'
-        amandaTrophies = amandaData.data.trophies + ' --------Amanda'
+        amandaTrophies = amandaData.data.trophies + ' --------Amanda 💩'
         ryanTrophies = ryanData.data.trophies + ' --------Ryan'
         andyTrophies = andyData.data.trophies + ' --------Andy'
         alanTrophies = alanData.data.trophies + ' --------Alan'
@@ -132,7 +132,11 @@ client.on("interactionCreate", async (interaction) => {
           const playerName = sortedPlayers[i].split(' ')[1]
           const convertedTrophiesNum = parseInt(sortedPlayers[i].split(' ')[0]).toLocaleString() 
           sortedPlayers[i] = convertedTrophiesNum + playerName
-          sortedPlayers[i] = `${i + 1}. ${sortedPlayers[i]}`
+          if (i === 0) {
+            sortedPlayers[i] = `${i + 1}. ${sortedPlayers[i]} 👑`
+          } else {
+            sortedPlayers[i] = `${i + 1}. ${sortedPlayers[i]}`
+          }
         }
 
         // Convert to string
@@ -144,17 +148,13 @@ client.on("interactionCreate", async (interaction) => {
       })
     const embed = new EmbedBuilder()
       .setColor('Random')
-      .setTitle('Trophies 💩')
+      .setTitle('Trophies 🏆')
       .setDescription(`${finalReply}`)
       .setTimestamp()
     
-    const exampleEmbed = {
-      description: '💩'
-    }
     interaction.reply({
       // content: `${finalReply}`,
-      // embeds: [embed]
-      embeds: [exampleEmbed]
+      embeds: [embed]
     })
   }
 })
