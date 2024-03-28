@@ -139,20 +139,22 @@ client.on("interactionCreate", async (interaction) => {
         finalReply = sortedPlayers.join('\n')
         console.log(finalReply)
       }))
-
       .catch(error => {
         console.log(error)
       })
-
     const embed = new EmbedBuilder()
       .setColor('Random')
       .setTitle('Trophies 💩')
       .setDescription(`${finalReply}`)
       .setTimestamp()
-
+    
+    const exampleEmbed = {
+      description: '💩'
+    }
     interaction.reply({
       // content: `${finalReply}`,
-      embeds: [embed]
+      // embeds: [embed]
+      embeds: [exampleEmbed]
     })
   }
 })
