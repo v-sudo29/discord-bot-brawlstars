@@ -24,7 +24,7 @@ export const client = new Client({
     GatewayIntentBits.MessageContent
   ]
 })
-
+console.log(client.emojis)
 async function registerSlashCommand() {
   const commands = [
     {
@@ -102,7 +102,7 @@ client.on("interactionCreate", async (interaction) => {
         erikData
       ) => {
         viTrophies = viData.data.trophies + ' --------Vi'
-        amandaTrophies = amandaData.data.trophies + ' --------Amanda :poop:'
+        amandaTrophies = amandaData.data.trophies + ' --------Amanda <:null:💩>'
         ryanTrophies = ryanData.data.trophies + ' --------Ryan'
         andyTrophies = andyData.data.trophies + ' --------Andy'
         alanTrophies = alanData.data.trophies + ' --------Alan'
