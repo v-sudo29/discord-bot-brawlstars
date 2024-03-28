@@ -102,7 +102,7 @@ client.on("interactionCreate", async (interaction) => {
         erikData
       ) => {
         viTrophies = viData.data.trophies + ' --------Vi'
-        amandaTrophies = amandaData.data.trophies + ' --------Amanda <:poop:💩>'
+        amandaTrophies = amandaData.data.trophies + ' --------Amanda'
         ryanTrophies = ryanData.data.trophies + ' --------Ryan'
         andyTrophies = andyData.data.trophies + ' --------Andy'
         alanTrophies = alanData.data.trophies + ' --------Alan'
@@ -146,7 +146,7 @@ client.on("interactionCreate", async (interaction) => {
 
     const embed = new EmbedBuilder()
       .setColor('Random')
-      .setTitle('Trophies')
+      .setTitle('Trophies 💩')
       .setDescription(`${finalReply}`)
       .setTimestamp()
 
